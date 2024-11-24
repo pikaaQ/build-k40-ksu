@@ -71,9 +71,7 @@ jobs:
       - name: Install Clang
         run: |
           mkdir clang
-          cd clang
-          https://github.com/Google-Pixel-3-XL/clang-r416183b.git --depth 1 clang-aosp
-          cd ..
+          git clone https://github.com/Google-Pixel-3-XL/clang-r416183b.git --depth 1 clang
       
       - name: Clone Kernel
         run: |
