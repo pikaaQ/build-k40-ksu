@@ -71,8 +71,9 @@ jobs:
       - name: Install Clang
         run: |
           mkdir clang
-          wget ${{ inputs.clang_url }}
-          tar -C clang/ -zxvf *.tar.gz
+          cd clang
+          https://github.com/Google-Pixel-3-XL/clang-r416183b.git --depth 1 clang-aosp
+          cd ..
       
       - name: Clone Kernel
         run: |
